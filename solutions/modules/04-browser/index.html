@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Godisbutiken</title>
+</head>
+
+<body>
+  <h1>Veganskt godis under 125 kr/kg</h1>
+  <ul id="result"></ul>
+
+  <!--
+    type="module" is what makes import/export work in the browser. It also makes
+    the script deferred, so the <ul> above already exists when main.js runs.
+
+    Remove type="module" and the console says:
+      Uncaught SyntaxError: Cannot use import statement outside a module
+
+    The page must be served over http:// (npx serve, Live Server, ...). Opening
+    the file with file:// fails, because modules are loaded with fetch and are
+    blocked by CORS.
+  -->
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
